@@ -1,0 +1,71 @@
+.homepage2{
+    background-color: #032d5a;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+    .homepage{
+        margin: 30px 0px 30px 0px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        align-self: center;
+    }
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+/* Task Details */
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+strong {
+    color: #555; /* Slightly darker for emphasis */
+}
+
+/* Buttons */
+.btn-delete {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #750511; /* Red for delete */
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-delete:hover {
+    background-color: #c50a1c; /* Darker red on hover */
+}
+
+.btn-cancel {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #032d5a; /* Blue for cancel */
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-cancel:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

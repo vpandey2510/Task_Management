@@ -1,0 +1,95 @@
+.homepage2{
+    background-color: #032d5a;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+    .homepage{
+        margin: 30px 0px 30px 0px;
+        width: 100%;
+        position: relative;
+        align-self: center;
+    }
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Control */
+.form-control {
+    margin-bottom: 15px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-control input, 
+.form-control select, 
+.form-control textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-control input:focus, 
+.form-control select:focus, 
+.form-control textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.errorlist {
+    color: #dc3545; /* Red for error messages */
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Submit Button */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+
+/* Back to Task List Button */
+.btn-back {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #032d5a;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background-color: #0056b3;
+}

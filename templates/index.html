@@ -1,0 +1,85 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+
+{% block title %}
+
+  Task Management System
+
+{% endblock %}
+
+
+{% block stylepage %}
+
+    <link rel="stylesheet" href="{% static '/css/index.css' %}">
+
+{% endblock stylepage %}
+
+
+{% block content %}
+<div class="homepage">
+        
+    <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First slide -->
+            <div class="carousel-item active">
+                <img src="https://res.cloudinary.com/monday-blogs/w_768,h_384,c_fit/fl_lossy,f_auto,q_auto/wp-blog/2020/12/Work2_Light-Purple.jpg" alt="slide1">
+                <div class="carousel-content">
+                    <h1>Welcome to TaskManager</h1>
+                    <h2>Manages your tasks for you, so you can manage your life better!!</h2>
+                    {% if user.is_authenticated %}
+                    <button class="start-btn" type="submit"><a href="{% url 'task-list' %}">Get Started</a></button>
+                    {% else %}
+                    <button class="start-btn" type="submit"><a href="{% url 'register' %}">Get Started</a></button>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- Second slide -->
+            <div class="carousel-item">
+                <img src="https://www.thesimplicityhabit.com/wp-content/uploads/2022/10/67-1024x683.jpg" alt="slide2">
+                <div class="carousel-content">
+                    <h1>Organize Your Tasks</h1>
+                    <h2>Stay on top of your to-do list effortlessly!!</h2>
+                </div>
+            </div>
+            <!-- Third slide -->
+            <div class="carousel-item">
+                <img src="https://www.meaningfullife.com/wp-content/uploads/2018/04/Soul-Workout-website-2-835x415.jpg" alt="slide3">
+                <div class="carousel-content">
+                    <h1>Achieve More</h1>
+                    <h2>Maximize productivity with TaskManager!!</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+{% include 'about.html' %}
+
+{% include 'services.html' %}
+
+{% include 'contact.html' %}
+
+<br><br>
+end
+
+</div>
+
+<!-- Bootstrap JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+    
+
+
+{% endblock content %}
+    

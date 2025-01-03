@@ -1,0 +1,96 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+
+{% block title %}
+
+    My Tasks
+    
+{% endblock title %}
+
+
+{% block stylepage %}
+
+    <link rel="stylesheet" href="{% static '/css/taskList.css' %}">
+
+{% endblock stylepage %}
+
+
+{% block content %}
+
+    <div class="homepage2">
+        <div class="homepage">
+            <div class="container">
+                <h1>My Task List</h1>
+        
+                <!-- Filter by Priority -->
+                <div>
+                    <form class="task-filter" method="GET">
+                        <select name="priority">
+                            <option value="">Priority</option>
+                            <option value="low" {% if request.GET.priority == "low" %}selected{% endif %}>Low</option>
+                            <option value="medium" {% if request.GET.priority == "medium" %}selected{% endif %}>Medium</option>
+                            <option value="high" {% if request.GET.priority == "high" %}selected{% endif %}>High</option>
+                        </select>
+                        <select name="category">
+                            <option value="">Category</option>
+                            <option value="work" {% if request.GET.priority == "work" %}selected{% endif %}>Work</option>
+                            <option value="personal" {% if request.GET.priority == "personal" %}selected{% endif %}>Personal</option>
+                            <option value="other" {% if request.GET.priority == "other" %}selected{% endif %}>Others</option>
+                        </select>
+                        <select name="status">
+                            <option value="">Status</option>
+                            <option value="pending" {% if request.GET.priority == "pending" %}selected{% endif %}>Pending</option>
+                            <option value="in_progress" {% if request.GET.priority == "in_progress" %}selected{% endif %}>In Progress</option>
+                            <option value="completed" {% if request.GET.priority == "completed" %}selected{% endif %}>Completed</option>
+                        </select>
+                        <button type="submit">Filter</button>
+                        <a href="{% url 'task-list' %}" class="btn-clear">Clear Filter</a>
+                    </form>
+                    
+                </div>
+                
+                <a href="{% url 'task-create' %}" class="create-task-btn">Create New Task</a>
+
+                
+    
+                <!-- Task List -->
+                <ul class="task_list">
+                    {% if tasks %}
+                        {% for task in tasks %}
+                            <li class="task-item priority-{{ task.priority }}">
+                                <h3>{{ task.title }}</h3>
+                                <p>{{ task.description }}</p>
+                                <div class="task-meta">
+                                    <span>Category: {{ task.get_category_display }}</span> |
+                                    <span>Priority: {{ task.get_priority_display }}</span> |
+                                    <span>Status: {{ task.get_status_display }}</span> |
+                                    <span>Deadline: {{ task.deadline|date:"F d, Y H:i" }}</span>
+                                </div>
+    
+                                <!-- Update and Delete Buttons -->
+                                <div class="task-actions">
+                                    <a href="{% url 'task-update' task.id %}" class="btn-update">Update</a>
+                                    <a href="{% url 'task-delete' task.id %}" class="btn-delete">Delete</a>
+                                </div> 
+    
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <p>No tasks found.</p>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+
+
+    
+
+
+
+
+
+    

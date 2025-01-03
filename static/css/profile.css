@@ -1,0 +1,51 @@
+.homepage{
+    background-color: #032d5a;
+    opacity: 0.9;
+    height: 600vh;
+    padding-top: 50px;
+}
+
+#profile{
+    border-color: #fff;
+}
+
+#profile h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#profile p{
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.start-btn{
+    background-color: #337dcc;
+    border-color: #337dcc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white !important;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.start-btn:hover{
+    background-color: #07488d;
+    border-color: #043468;
+    color: white !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.start-btn a:link{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 5px 10px 5px;
+}
+
+.start-btn a:visited{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 5px 10px 5px;
+}

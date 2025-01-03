@@ -1,0 +1,45 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+
+{% block title %}
+
+    Profile
+
+{% endblock title %}
+
+
+{% block stylepage %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    
+{% endblock stylepage %}
+
+
+ 
+
+{% block content %}
+<div class="homepage">
+
+    <div id="profile" class="justify-content-center">
+
+        <h1 class="text-center mb-4"><b style="border-bottom: 3px solid white;">Your</b> Profile</h1>
+    
+        <p class="text-center mb-4">First Name: {{user.first_name}}</p>
+        <p class="text-center mb-4">Last Name: {{user.last_name}}</p>
+        <p class="text-center mb-4">Username: {{ user.username }}</p>
+        <p class="text-center mb-4">Email: {{ user.email }}</p>
+    
+        <div class="text-center mb-4">
+            <button class="start-btn" type="submit">
+                <a  href="{% url 'logout' %}">Logout</a>
+            </button>
+        </div>
+    
+    </div>
+</div>
+
+    
+{% endblock content %}
+    
+    

@@ -1,0 +1,120 @@
+.homepage2{
+    background-color: #032d5a;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+    .homepage{
+        margin: 30px 0px 30px 0px;
+        max-width: 430px;
+        width: 100%;
+        position: relative;
+        align-self: center;
+    }
+
+    .container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    padding: 34px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    .container h2{
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    }
+
+    .container h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 28px;
+    border-radius: 12px;
+    background: #032d5a;
+    }
+
+    form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 15px;
+    }
+
+    form label {
+        display: block;
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 16px;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #032d5a;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: #0056b3;
+    } 
+
+    p{
+        text-align: center;
+    }
+
+    .messages {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    
+    .alert {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+        
+    .alert-success {
+        background-color: #d4edda !important; /* Light green background for success */
+        color: #155724 !important; /* Dark green text */
+        border: 1px solid #c3e6cb !important; /* Border color for success */
+    }
+    
+    .alert-error, .alert-danger {
+        background-color: #f8d7da !important; /* Light red background for errors */
+        color: #721c24 !important; /* Dark red text */
+        border: 1px solid #f5c6cb !important; /* Border color for errors */
+    }
+    
+    .alert-info {
+        background-color: #d1ecf1 !important; /* Light blue background for info */
+        color: #0c5460 !important; /* Dark blue text */
+        border: 1px solid #bee5eb !important; /* Border color for info */
+    }
+    
+    .alert-warning {
+        background-color: #fff3cd !important; /* Light yellow background for warnings */
+        color: #856404 !important; /* Dark yellow text */
+        border: 1px solid #ffeeba !important; /* Border color for warnings */
+    }

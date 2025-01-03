@@ -1,0 +1,93 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+
+{% block title %}
+
+    Update Tasks
+    
+{% endblock title %}
+
+
+{% block stylepage %}
+
+    <link rel="stylesheet" href="{% static '/css/taskForm.css' %}">
+
+{% endblock stylepage %}
+
+
+{% block content %}
+
+    <div class="homepage2">
+        <div class="homepage">
+            <div class="container">
+                <h1>Update Task</h1>
+                
+                <!-- Form -->
+                <form method="POST">
+                    {% csrf_token %}
+                    
+                    
+                    <div class="form-control">
+                        {{ form.title.label_tag }}
+                        {{ form.title }}
+                        {% if form.title.errors %}
+                            <div class="errorlist">{{ form.title.errors }}</div>
+                        {% endif %}
+                    </div>
+        
+                    <div class="form-control">
+                        {{ form.description.label_tag }}
+                        {{ form.description }}
+                        {% if form.description.errors %}
+                            <div class="errorlist">{{ form.description.errors }}</div>
+                        {% endif %}
+                    </div>
+        
+                    <div class="form-control">
+                        {{ form.category.label_tag }}
+                        {{ form.category }}
+                        {% if form.category.errors %}
+                            <div class="errorlist">{{ form.category.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-control">
+                        {{ form.priority.label_tag }}
+                        {{ form.priority }}
+                        {% if form.priority.errors %}
+                            <div class="errorlist">{{ form.priority.errors }}</div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="form-control">
+                        {{ form.status.label_tag }}
+                        {{ form.status }}
+                        {% if form.status.errors %}
+                            <div class="errorlist">{{ form.status.errors }}</div>
+                        {% endif %}
+                    </div>                
+        
+                    <div class="form-control">
+                        {{ form.deadline.label_tag }}
+                        {{ form.deadline }}
+                        {% if form.deadline.errors %}
+                            <div class="errorlist">{{ form.deadline.errors }}</div>
+                        {% endif %}
+                    </div>
+    
+                    
+                    <!-- Submit button -->
+                    <button type="submit" class="btn-submit">Edit Task</button>
+                </form>
+        
+                <!-- Back to task list link -->
+                <a href="{% url 'task-list' %}" class="btn-back">Back to Task List</a>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+
+
+    

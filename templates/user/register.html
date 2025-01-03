@@ -1,0 +1,45 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block stylepage %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="homepage2">
+        <div class="homepage">
+    
+            <div class="register-container container"> <!-- container class is in layouts.css -->
+                <h2>Register</h2>
+        
+                <!-- Display messages -->
+                {% if messages %}
+                    <div class="messages">
+                        {% for message in messages %}
+                            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+        
+                <form method="POST" class="register-form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.as_p }} <!-- Renders the form fields -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+        
+                <p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+            </div>
+        
+        </div>
+    </div>
+
+{% endblock %}

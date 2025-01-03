@@ -1,0 +1,51 @@
+#services{
+    background-color: #032d5a !important;
+    opacity: 0.9;
+    margin: 0;
+    padding: 0;
+    color: #fff !important;
+}
+
+#services h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff !important;
+}
+
+#services p.lead {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #fff !important;
+}
+
+.service-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box i {
+    color: #007bff;
+}
+
+.service-box h4 {
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Flexbox to keep content between navbar and footer */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    background-color:#043468;
+    color: white !important;
+}
+
+.nav-item p{
+    margin-top: 8px;;
+}
+
+
+.navbar-brand{
+    margin-left: 20px;
+    color: white !important;
+    justify-content: space-between;    
+}
+
+.nav-item .nav-link{
+    color: #f1f1f1;
+    justify-content: space-between;
+}
+
+.navbar-nav .nav-link:hover {
+    cursor:pointer;
+    text-decoration-line:underline;
+    text-decoration-style: dotted;
+    color: #337dcc;
+}
+
+/* Flex-grow makes the main content take remaining space */
+.content {
+    flex-grow: 1;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #043468;
+    color: white !important;
+}
+
+.nav .nav-item .nav-link{
+    color: white !important;   
+}

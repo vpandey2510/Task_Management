@@ -1,0 +1,85 @@
+.homepage{
+    background-color: #032d5a;
+}
+
+#customCarousel{
+    background-color: #3b3b3d;
+}
+/* Fullscreen height for carousel items */
+.carousel-item {
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure the image covers the full item area */
+    opacity: 0.5;  /* Reduce opacity to make it more transparent */
+}
+
+.start-btn{
+    background-color: #032d5a;
+    border: 1px solid #032d5a;
+    border-radius: 20px;
+    margin-top: 50px;
+    width: 150px;
+    height: 50px;
+}
+
+.start-btn:hover{
+    background-color: #0056b3;
+    border: 1px solid #0056b3;
+}
+
+.start-btn a:link{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 5px 10px 5px;
+}
+
+.start-btn a:visited{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 5px 10px 5px;
+}
+
+/* Styling for the text inside the carousel */
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.carousel-content h1, .carousel-content h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Overlay for better text readability */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Adjust padding and spacing */
+.carousel-content h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.carousel-content h2 {
+    font-size: 1.8rem;
+}
+

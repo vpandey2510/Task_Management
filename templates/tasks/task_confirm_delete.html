@@ -1,0 +1,41 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+
+{% block title %}
+
+    Delete Tasks
+    
+{% endblock title %}
+
+
+{% block stylepage %}
+
+    <link rel="stylesheet" href="{% static '/css/taskDelete.css' %}">
+
+{% endblock stylepage %}
+
+
+{% block content %}
+
+    <div class="homepage2">
+        <div class="homepage">
+            <div class="container">
+                <h1>Delete Task</h1>
+                <p>Are you sure you want to delete the task "<strong>{{ task.title }}</strong>"?</p>
+                <p><strong>Description:</strong> {{ task.description }}</p>
+                <p><strong>Priority:</strong> {{ task.get_priority_display }}</p>
+                <p><strong>Category:</strong> {{ task.get_category_display }}</p>
+                <p><strong>Status:</strong> {{ task.get_status_display }}</p>
+                <p><strong>Deadline:</strong> {{ task.deadline|date:"F d, Y H:i" }}</p>
+            
+                <form method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-delete">Confirm Delete</button>
+                    <a href="{% url 'task-list' %}" class="btn-cancel">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}

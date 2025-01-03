@@ -1,0 +1,184 @@
+{% extends 'layouts.html' %}
+{% load static %}
+
+
+{% block title %}
+
+    FAQs
+    
+{% endblock title %}
+
+
+{% block stylepage %}
+
+    <link rel="stylesheet" href="{% static '/css/faq.css' %}">
+    
+{% endblock stylepage %}
+
+
+{% block content %}
+
+    <div class="homepage2">
+        <div class="homepage">
+            <div class="container">
+                <h2 class="text-center">
+                    <strong><b style="border-bottom: 4px solid #032d5a;">Frequently</b> Asked Questions</strong>
+                </h2>
+
+                <div class="faq-section">
+                    {% if user.is_authenticated %}
+
+                        <div class="faq-item">
+                        <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">What is the purpose of this website?</div>
+                        <div class="faq-answer">
+                            <p>This website helps users create, manage, and organize tasks. It allows users to categorize tasks, set priorities, deadlines, and track the status of each task.</p>
+                        </div>
+                        </div>
+                            
+                        <div class="faq-item">
+                            <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">How do I create an account?</div>
+                            <div class="faq-answer">
+                               <p>To create an account, go to the <a href="{% url 'profile' %}">Register</a> page and fill out the required details. After successfully registering, you can <a href="{% url 'profile' %}">log in</a> using your credentials.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">                      
+                        <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">How do I add a new task?</div>
+                            <div class="faq-answer">
+                            <p>To start creating tasks, follow these simple steps:
+                                <ol>
+                                    <li><a href="{% url 'profile' %}">Log in</a>: Ensure you are logged in to your account.</li>
+                                    <li>Go to the Task Page: Once logged in, navigate to the <a href="{% url 'task-list' %}">"My Tasks"</a> page using the navigation bar.</li>
+                                    <li>Click on 'Create New Task': You will find a <a href="{% url 'task-create' %}">"Create New Task"</a> button on the task list page.</li>
+                                    <li>Fill in the Task details.</li>
+                                    <li>Submit the Task: Click the "Submit" button to save your task.</li>
+                                </ol>
+                                <br>
+                                <a href="{% url 'task-list' %}">Start creating tasks here!</a>
+                            </p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">Can I filter my tasks?</div>
+                            <div class="faq-answer">
+                                <p>Yes, you can filter tasks based on priority, category, and status using the filter options at the top of the task list.</p>
+                            </div>
+                        </div>
+    
+                        <div class="faq-item">
+                            <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">How do I update or delete a task?</div>
+                            <div class="faq-answer">
+                               <p>Each task in your list has an "Update" and "Delete" button. Click "Update" to modify the task details or "Delete" to remove the task from your list.
+                                <br>
+                                <a href="{% url 'task-list' %}">Update or Delete your tasks here!</a>
+                               </p>
+                            </div>
+                        </div>
+                            
+                        <div class="faq-item">
+                            <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">What happens when I delete a task?</div>
+                            <div class="faq-answer">
+                               <p>Once you confirm the deletion of a task, it will be permanently removed from your task list and cannot be recovered.</p>
+                            </div>
+                        </div>
+                        
+                        {% else %}
+                            
+                        <div class="faq-item">
+                            <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">What is the purpose of this website?</div>
+                            <div class="faq-answer">
+                                <p>This website helps users create, manage, and organize tasks. It allows users to categorize tasks, set priorities, deadlines, and track the status of each task.</p>
+                            </div>
+                            </div>
+                                
+                            <div class="faq-item">
+                                <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">How do I create an account?</div>
+                                <div class="faq-answer">
+                                   <p>To create an account, go to the <a href="{% url 'register' %}">Register</a> page and fill out the required details. After successfully registering, you can <a href="{% url 'login' %}">log in</a> using your credentials.</p>
+                                </div>
+                            </div>
+    
+                            <div class="faq-item">                      
+                            <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">How do I add a new task?</div>
+                                <div class="faq-answer">
+                                <p>To start creating tasks, follow these simple steps:
+                                    <ol>
+                                        <li><a href="{% url 'login' %}">Log in</a>: Ensure you are logged in to your account.</li>
+                                        <li>Go to the Task Page: Once logged in, navigate to the <a href="{% url 'login' %}">"My Tasks"</a> page using the navigation bar.</li>
+                                        <li>Click on 'Create New Task': You will find a <a href="{% url 'login' %}">"Create New Task"</a> button on the task list page.</li>
+                                        <li>Fill in the Task details.</li>
+                                        <li>Submit the Task: Click the "Submit" button to save your task.</li>
+                                    </ol>
+                                    <br>
+                                    <a href="{% url 'login' %}">Start creating tasks here!</a>
+                                </p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">Can I filter my tasks?</div>
+                                <div class="faq-answer">
+                                    <p>Yes, you can filter tasks based on priority, category, and status using the filter options at the top of the task list.</p>
+                                </div>
+                            </div>
+        
+                            <div class="faq-item">
+                                <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">How do I update or delete a task?</div>
+                                <div class="faq-answer">
+                                   <p>Each task in your list has an "Update" and "Delete" button. Click "Update" to modify the task details or "Delete" to remove the task from your list.
+                                    <br><br>
+                                    <a href="{% url 'login' %}">Update or Delete your tasks here!</a>
+                                   </p>
+                                </div>
+                            </div>
+                                
+                            <div class="faq-item">
+                                <div class="faq-question"><img src="https://www.skyward.com/web/media/Images/Support/bullet_white_active.png" alt="">What happens when I delete a task?</div>
+                                <div class="faq-answer">
+                                   <p>Once you confirm the deletion of a task, it will be permanently removed from your task list and cannot be recovered.</p>
+                                </div>
+                            </div>
+
+                        {% endif %}
+                  </div>      
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Select all FAQ questions
+          const faqQuestions = document.querySelectorAll('.faq-question');
+        
+          faqQuestions.forEach(function(question) {
+            question.addEventListener('click', function() {
+              // Get the currently active (open) answer
+              const currentlyActive = document.querySelector('.faq-answer.active');
+        
+              // Get the answer associated with the clicked question
+              const answer = question.nextElementSibling;
+        
+              // If there's an active answer and it's not the one we just clicked, hide it
+              if (currentlyActive && currentlyActive !== answer) {
+                currentlyActive.classList.remove('active');
+                currentlyActive.style.display = 'none';
+              }
+        
+              // Toggle the visibility of the clicked answer
+              if (answer.classList.contains('active')) {
+                // If it's already active, hide it
+                answer.classList.remove('active');
+                answer.style.display = 'none';
+              } else {
+                // If it's not active, show it
+                answer.classList.add('active');
+                answer.style.display = 'block';
+              }
+            });
+          });
+        });
+        
+        </script>
+    
+{% endblock content %}
