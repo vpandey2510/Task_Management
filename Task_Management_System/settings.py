@@ -180,7 +180,3 @@ CELERY_BEAT_SCHEDULE = {
 
 
 
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'vasundhara.2510@gmail.com'
-EMAIL_HOST_PASSWORD = 'ycmt fdge hykl dmgb'
